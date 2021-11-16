@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+//    implementation fileTree(dir: "libs", include: ["*.aar"])
+    compileOnly files('../app/libs/layaconch.jar')
+    compileOnly fileTree(include: ['*.aar'], dir: 'runtime')
+    compileOnly 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.vimedia.core:base:1.0.6'
+    implementation 'com.vimedia.core:common:1.2.9'
+    implementation 'com.vimedia.game:manager:1.6.2'
+}
+

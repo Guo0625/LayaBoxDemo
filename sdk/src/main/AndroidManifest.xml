@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vimedia.integrate.game.creatorbridge">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-feature android:glEsVersion="0x00020000" /> <!-- 手机振动permission -->
+    <application>
+        <activity android:name="com.vimedia.creatorbridge.CreatorWbActivity"></activity>
+    </application>
+</manifest>

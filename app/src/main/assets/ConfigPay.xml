@@ -1,0 +1,11 @@
+<Config>
+    <Market>free</Market>
+    <DefalultPay>
+        <DefalultOperator
+            CMCC="free"
+            UNICOM="free"
+            TELECOM="free"
+            Other="free"
+        />
+    </DefalultPay>
+</Config>

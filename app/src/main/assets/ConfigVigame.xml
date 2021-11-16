@@ -1,0 +1,21 @@
+<ConfigVigame>
+    <GameOpenActivity>demo.MainActivity</GameOpenActivity>
+    <ScreenOrientation>portrait</ScreenOrientation>
+    <SupportAdPositions>splash,banner,pause,level_win,level_fail,gift_reward,gift_speed,home_mfzs,pause_mfzs,level_fail_mfzs</SupportAdPositions>
+	<!--<SplashFile></SplashFile>-->
+    <!--注释掉下面这行：没有广告的时候，海外包。会默认只带前面两个权限-->
+    <Permissions>READ_PHONE_STATE,WRITE_EXTERNAL_STORAGE</Permissions>
+    <!--<Permissions></Permissions>-->
+    <IsSDK>true</IsSDK>
+    <HealthEnable>true</HealthEnable>
+    <HealthColor>FFFFFFFF</HealthColor>
+    <!--index 和 company 对应-->
+    <!--1.动能无线
+    2.飞鸟与鱼
+    3.统掌科技
+    4.唯变科技
+    5.全支付科技
+    6.漫城科技-->
+    <CompanyIndex>1</CompanyIndex><!--公司名称对应的数字，对应关系见上面-->
+    <Company>动能无线</Company><!--公司名称-->
+</ConfigVigame>

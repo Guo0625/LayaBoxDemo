@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.0"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.layabox.game"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "2.0"
+        manifestPlaceholders = [
+                Splash_Orientation:"portrait",
+                DN_APPID:"13665",
+                DN_APPKEY:"hnt35fqd5ykmhkpo7hq7e3ure8be0ljf6eh6hzay3afpr7q7u5",
+                DN_CHANNEL:"baibao",
+                DN_PRJID:"13665166",
+                AppsFlyer_DevKey:"X9NxxaMp4neHCFYreDxtd5",
+                ADMOB_APP_ID:"ca-app-pub-7851203648968517~3923216450",
+
+                //#track_BEGAIN
+                ADJUST_TOKEN:"wltxsy41qygw",
+                ADJUST_TESTMODEL:"false",
+                ADJUST_TOKEN_SECOND:"mg6erg",
+                ReYunAppKey:"471bf341b4a1ad6f46eb48f56a935e8e",
+                APPLOG_SCHEME:"rangersapplog.byax6uyt",
+                HEADLINE_APPID:"152405",
+                GDTAppId:"1111232169",
+                GDTAppKey:"eadf902c98e6617a803938457c392b05",
+                //#track_END
+
+                //#TJ_BEGAIN
+                UMENG_APPKEY:"591e8a3275ca3549e8000e5c",
+                //#TJ_END
+
+                //#Pay_BEGAIN
+                //#Pay_END
+        ]
+    }
+
+    sourceSets.main{
+        jniLibs.srcDir 'libs'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+
+    //#Module_Begin
+    implementation 'com.vimedia.ad:manager:1.7.4'
+    implementation 'com.vimedia.ad:vigame:1.3.1'
+    implementation 'com.vimedia.core:base:1.0.6'
+    implementation 'com.vimedia.core:common:1.2.9'
+    implementation 'com.vimedia.core:kinetic:1.9.9'
+    implementation 'com.vimedia.core:plugin:1.1.9'
+    implementation 'com.vimedia.extensions:dbdebug:1.0.1'
+    implementation 'com.vimedia.extensions:protocol:1.0.3'
+//    implementation 'com.vimedia.extensions:redeem_v3:1.0.2'
+    implementation 'com.vimedia.extensions:survey_product:1.0.5'
+//    implementation 'com.vimedia.extensions:survey:1.0.6'
+    implementation 'com.vimedia.ext:login:1.1.3'
+    implementation 'com.vimedia.ext:manager:1.1.3'
+    implementation 'com.vimedia.game:manager:1.6.2'
+    implementation 'com.vimedia.pay:free:1.0.0'
+    implementation 'com.vimedia.pay:manager:1.1.9'
+
+    implementation 'com.vimedia.social:commonlogin:1.0.2'
+    implementation 'com.vimedia.social:manager:1.0.7'
+    implementation 'com.vimedia.third.ext:miit_mdid_sdk:1.0.13.1'
+    implementation 'com.vimedia.tj:manager:1.0.6'
+    implementation 'com.vimedia.tj:umeng:1.1.6'
+
+    implementation 'com.vimedia.track:manager:1.1.6'
+    implementation 'com.vimedia.track:persona:1.0.9'
+
+    implementation 'com.vimedia.ad:adtest:1.0.1'
+
+    implementation project(path: ':sdk')
+}
