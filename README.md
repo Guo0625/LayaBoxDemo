@@ -1,3 +1,3 @@
 # LayaBoxDemo
 
-接入示例
+sdk接入示例
